@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dashboard-rh-profissional</title>
+  <title>dashboard-rh-pdv-distribuidora</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet">
@@ -21,30 +21,28 @@
       --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
       --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-xl: 1rem; --radius-full: 9999px;
       --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
-      --color-bg: #f7f6f2;
-      --color-surface: #f9f8f5;
-      --color-surface-2: #fbfbf9;
-      --color-surface-offset: #f1efe9;
-      --color-border: #d6d2cb;
-      --color-divider: #e2dfd8;
-      --color-text: #211f1a;
-      --color-text-muted: #6f6c66;
-      --color-text-faint: #9c9991;
-      --color-text-inverse: #f9f8f4;
-      --color-primary: #01696f;
-      --color-primary-hover: #0c4e54;
-      --color-primary-highlight: #d7e5e1;
-      --color-success: #437a22;
-      --color-warning: #b07a00;
-      --color-danger: #a13544;
+      --color-bg: #f5f3ef;
+      --color-surface: #fbfaf7;
+      --color-surface-2: #ffffff;
+      --color-surface-offset: #efebe5;
+      --color-border: #d7d0c6;
+      --color-divider: #e4ddd4;
+      --color-text: #211e19;
+      --color-text-muted: #6f6a62;
+      --color-text-faint: #9d978e;
+      --color-text-inverse: #faf8f4;
+      --color-primary: #0c6a6b;
+      --color-primary-hover: #085557;
+      --color-primary-highlight: #d8e7e5;
+      --color-success: #4d7f31;
+      --color-warning: #bb8308;
+      --color-danger: #af3948;
       --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
       --shadow-md: 0 8px 24px oklch(0.2 0.01 80 / 0.08);
       --shadow-lg: 0 20px 40px oklch(0.2 0.01 80 / 0.12);
       --font-display: 'Cabinet Grotesk', 'Inter', sans-serif;
       --font-body: 'Satoshi', 'Inter', sans-serif;
-      --content-wide: 1200px;
     }
-
     [data-theme="dark"] {
       --color-bg: #171614;
       --color-surface: #1c1b19;
@@ -52,26 +50,25 @@
       --color-surface-offset: #282624;
       --color-border: #393733;
       --color-divider: #2b2927;
-      --color-text: #eeece7;
+      --color-text: #f1eee8;
       --color-text-muted: #aaa6a0;
       --color-text-faint: #7b7771;
       --color-text-inverse: #1b1a18;
-      --color-primary: #4f98a3;
-      --color-primary-hover: #6db5c0;
-      --color-primary-highlight: #243437;
-      --color-success: #7cb45b;
-      --color-warning: #e0ad42;
-      --color-danger: #e06a79;
+      --color-primary: #57a5a8;
+      --color-primary-hover: #74bec1;
+      --color-primary-highlight: #243638;
+      --color-success: #7db05d;
+      --color-warning: #e1ad41;
+      --color-danger: #e16c7a;
       --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2);
       --shadow-md: 0 8px 24px oklch(0 0 0 / 0.28);
       --shadow-lg: 0 20px 40px oklch(0 0 0 / 0.38);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-size-adjust: none; }
     body {
       min-height: 100dvh; line-height: 1.6; font-family: var(--font-body); font-size: var(--text-base);
-      color: var(--color-text); background: radial-gradient(circle at top right, color-mix(in oklab, var(--color-primary) 14%, transparent), transparent 28%), var(--color-bg);
+      color: var(--color-text); background: radial-gradient(circle at top right, color-mix(in oklab, var(--color-primary) 12%, transparent), transparent 30%), var(--color-bg);
     }
     img, svg, canvas { display: block; max-width: 100%; }
     button, input, select { font: inherit; color: inherit; }
@@ -92,7 +89,7 @@
     }
     .brand { display: flex; align-items: center; gap: var(--space-3); }
     .brand-mark {
-      width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(135deg, var(--color-primary), color-mix(in oklab, var(--color-primary) 55%, white));
+      width: 46px; height: 46px; border-radius: 14px; background: linear-gradient(135deg, var(--color-primary), color-mix(in oklab, var(--color-primary) 60%, white));
       color: white; display: grid; place-items: center; box-shadow: var(--shadow-md);
     }
     .brand-copy strong { display:block; font-family: var(--font-display); font-size: 1.05rem; letter-spacing: -0.02em; }
@@ -111,19 +108,18 @@
     .theme-toggle:hover { transform: translateY(-1px); border-color: var(--color-primary); }
 
     .hero {
-      display:grid; grid-template-columns: 1.2fr .8fr; gap: var(--space-6); padding: var(--space-8) 0 var(--space-6);
+      display:grid; grid-template-columns: 1.25fr .75fr; gap: var(--space-6); padding: var(--space-8) 0 var(--space-5);
       align-items: stretch;
     }
-    .hero-card, .hero-side, .module-card, .chart-card, .info-box, .quality-card {
+    .hero-card, .hero-side, .module-card, .chart-card, .info-box {
       background: color-mix(in oklab, var(--color-surface) 92%, transparent);
       border: 1px solid color-mix(in oklab, var(--color-border) 88%, transparent);
       border-radius: var(--radius-xl); box-shadow: var(--shadow-sm);
     }
     .hero-card {
       padding: clamp(1.5rem, 2vw, 2.25rem);
-      display:flex; flex-direction:column; justify-content:space-between; min-height: 360px;
       background:
-        radial-gradient(circle at 88% 12%, color-mix(in oklab, var(--color-primary) 26%, transparent), transparent 24%),
+        radial-gradient(circle at 88% 12%, color-mix(in oklab, var(--color-primary) 24%, transparent), transparent 24%),
         linear-gradient(180deg, color-mix(in oklab, var(--color-surface-2) 86%, transparent), var(--color-surface));
     }
     .eyebrow {
@@ -132,18 +128,9 @@
       text-transform: uppercase; letter-spacing: .08em;
     }
     .hero-card h1 {
-      margin-top: var(--space-5); font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1; letter-spacing: -0.04em; max-width: 12ch;
+      margin-top: var(--space-5); font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1; letter-spacing: -0.04em; max-width: 11ch;
     }
-    .hero-card p { margin-top: var(--space-4); max-width: 58ch; color: var(--color-text-muted); }
-    .hero-actions { display:flex; gap: var(--space-3); flex-wrap:wrap; margin-top: var(--space-6); }
-    .btn {
-      min-height: 46px; padding: 0 var(--space-5); border-radius: var(--radius-full); display:inline-flex; align-items:center; justify-content:center; gap: var(--space-2);
-      text-decoration:none; transition: transform var(--transition-interactive), background var(--transition-interactive), border-color var(--transition-interactive);
-    }
-    .btn-primary { background: var(--color-primary); color: white; }
-    .btn-primary:hover { transform: translateY(-1px); background: var(--color-primary-hover); }
-    .btn-secondary { background: transparent; color: var(--color-text); border: 1px solid var(--color-border); }
-    .btn-secondary:hover { transform: translateY(-1px); border-color: var(--color-primary); }
+    .hero-card p { margin-top: var(--space-4); max-width: 60ch; color: var(--color-text-muted); }
     .hero-metrics { margin-top: var(--space-6); display:grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
     .hero-metric { padding: var(--space-4); background: color-mix(in oklab, var(--color-surface-2) 88%, transparent); border: 1px solid var(--color-divider); border-radius: calc(var(--radius-xl) - var(--space-3)); }
     .hero-metric span { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: .08em; }
@@ -151,11 +138,27 @@
 
     .hero-side { padding: var(--space-5); display:flex; flex-direction:column; gap: var(--space-4); }
     .hero-side h2, .section-heading h2 { font-family: var(--font-display); font-size: var(--text-lg); line-height: 1.1; letter-spacing: -0.03em; }
-    .hero-side p, .quality-card p, .chart-sub, .section-heading p { color: var(--color-text-muted); font-size: var(--text-sm); }
-    .quality-card { padding: var(--space-4); }
+    .hero-side p, .chart-sub, .section-heading p { color: var(--color-text-muted); font-size: var(--text-sm); }
+    .quality-card { padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: color-mix(in oklab, var(--color-surface-2) 88%, transparent); }
     .quality-card strong { display:block; font-size: var(--text-sm); }
     .quality-track { margin-top: var(--space-3); height: 8px; border-radius: 999px; background: var(--color-surface-offset); overflow:hidden; }
     .quality-fill { height:100%; border-radius:999px; background: linear-gradient(90deg, var(--color-warning), var(--color-primary)); }
+
+    .indicator-hub { display:grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--space-3); margin-bottom: var(--space-6); }
+    .indicator-card {
+      min-height: 164px; padding: var(--space-4); border-radius: var(--radius-xl); border: 1px solid var(--color-border);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--color-surface-2) 82%, transparent), var(--color-surface));
+      text-align:left; box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-interactive), border-color var(--transition-interactive), background var(--transition-interactive);
+    }
+    .indicator-card:hover { transform: translateY(-2px); border-color: var(--color-primary); }
+    .indicator-card.active { border-color: var(--color-primary); background: color-mix(in oklab, var(--color-primary) 10%, var(--color-surface)); }
+    .indicator-icon {
+      width: 46px; height: 46px; border-radius: 14px; display:grid; place-items:center; color: var(--color-primary);
+      background: var(--color-primary-highlight); margin-bottom: var(--space-4);
+    }
+    .indicator-card h3 { font-family: var(--font-display); font-size: 1rem; line-height: 1.1; }
+    .indicator-card p { margin-top: var(--space-2); color: var(--color-text-muted); font-size: var(--text-xs); }
 
     .nav-strip {
       display:flex; gap: var(--space-2); overflow:auto; padding-bottom: var(--space-2); margin-bottom: var(--space-5);
@@ -169,16 +172,7 @@
 
     .section-heading { display:flex; justify-content:space-between; gap: var(--space-4); align-items:flex-end; margin: var(--space-4) 0 var(--space-5); flex-wrap:wrap; }
     .section-heading .meta { color: var(--color-text-muted); font-size: var(--text-sm); }
-    .overview-grid, .kpi-grid, .chart-grid-2, .chart-grid-3, .row-2, .diversity-grid, .modules-grid {
-      display:grid; gap: var(--space-4);
-    }
-    .overview-grid { grid-template-columns: repeat(4, 1fr); margin-bottom: var(--space-6); }
-    .modules-grid { grid-template-columns: repeat(3, 1fr); margin: var(--space-6) 0; }
-    .module-card { padding: var(--space-5); }
-    .module-card h3 { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: var(--space-2); }
-    .module-card p { color: var(--color-text-muted); font-size: var(--text-sm); max-width: 36ch; }
-    .module-card .mini-meta { margin-top: var(--space-4); color: var(--color-primary); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-
+    .kpi-grid, .chart-grid-2, .row-2, .diversity-grid { display:grid; gap: var(--space-4); }
     .kpi-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-bottom: var(--space-5); }
     .kpi-card {
       background: linear-gradient(180deg, color-mix(in oklab, var(--color-surface-2) 86%, transparent), var(--color-surface));
@@ -192,17 +186,12 @@
     .kpi-success { color: var(--color-success); }
     .kpi-warn { color: var(--color-warning); }
 
-    .filters {
-      display:flex; flex-wrap:wrap; gap: var(--space-3); margin-bottom: var(--space-5); align-items:center;
-    }
-    .filter-control, .hero-filter {
+    .filters { display:flex; flex-wrap:wrap; gap: var(--space-3); margin-bottom: var(--space-5); align-items:center; }
+    .filter-control {
       min-height: 44px; padding: 0 var(--space-4); border-radius: var(--radius-full); border: 1px solid var(--color-border);
       background: var(--color-surface); color: var(--color-text);
     }
-
-    .chart-grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .chart-grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .row-2 { grid-template-columns: repeat(2, 1fr); margin-top: var(--space-4); }
+    .chart-grid-2, .row-2 { grid-template-columns: repeat(2, 1fr); }
     .diversity-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
     .chart-card { padding: var(--space-5); min-width: 0; }
     .chart-card h3 { font-family: var(--font-display); font-size: 1rem; margin-bottom: var(--space-2); }
@@ -215,7 +204,6 @@
       color: var(--color-text);
     }
     .info-box strong { color: var(--color-warning); }
-
     .table-wrap { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--color-border); }
     th, td { padding: 12px 14px; text-align:left; border-bottom: 1px solid var(--color-divider); font-size: var(--text-sm); }
     th { color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .08em; background: var(--color-surface-2); }
@@ -224,14 +212,12 @@
     .mov-table td:first-child, .mov-table th:first-child { text-align:left; }
     .num-pos { color: var(--color-success); font-weight: 700; }
     .num-neg { color: var(--color-danger); font-weight: 700; }
-
     .bar-list { display:flex; flex-direction:column; gap: var(--space-3); }
     .bar-item { display:flex; align-items:center; gap: var(--space-3); }
     .bar-label { width: 150px; font-size: var(--text-sm); color: var(--color-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .bar-track { flex:1; height: 8px; background: var(--color-surface-offset); border-radius: 999px; overflow:hidden; }
     .bar-fill { height:100%; border-radius:999px; background: linear-gradient(90deg, var(--color-primary), color-mix(in oklab, var(--color-primary) 55%, white)); }
     .bar-val { width: 44px; text-align:right; font-weight: 700; }
-
     #loading-screen {
       position: fixed; inset: 0; z-index: 999; background: color-mix(in oklab, var(--color-bg) 92%, transparent);
       display:flex; flex-direction:column; align-items:center; justify-content:center; gap: var(--space-4); backdrop-filter: blur(10px);
@@ -240,19 +226,15 @@
     @keyframes spin { to { transform: rotate(360deg); } }
     .panel { display:none; }
     .panel.active { display:block; }
-    .panel.hidden-from-nav { display:none !important; }
-
     .footer-note { padding: var(--space-8) 0 var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm); text-align:center; }
 
-    @media (max-width: 1100px) {
-      .hero, .overview-grid, .modules-grid, .chart-grid-3 { grid-template-columns: 1fr 1fr; }
-      .hero { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 1260px) { .indicator-hub { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 1100px) { .hero { grid-template-columns: 1fr; } }
     @media (max-width: 820px) {
-      .overview-grid, .modules-grid, .chart-grid-2, .chart-grid-3, .row-2, .hero-metrics { grid-template-columns: 1fr; }
+      .indicator-hub, .chart-grid-2, .row-2, .hero-metrics { grid-template-columns: 1fr; }
       .topbar-inner { align-items: flex-start; flex-direction: column; }
       .app-shell { padding-inline: var(--space-3); }
-      .hero-card h1 { max-width: 15ch; }
+      .hero-card h1 { max-width: 14ch; }
       .brand-copy strong { font-size: 1rem; }
       .bar-label { width: 120px; }
     }
@@ -279,7 +261,7 @@
           </svg>
         </div>
         <div class="brand-copy">
-          <strong>Painel Executivo de Pessoas</strong>
+          <strong>PDV Distribuidora · Painel de RH</strong>
           <span id="last-update">Aguardando dados...</span>
         </div>
       </div>
@@ -296,42 +278,73 @@
   <div class="app-shell">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-card">
-        <div>
-          <span class="eyebrow">Tela inicial executiva</span>
-          <h1 id="hero-title">Uma entrada mais profissional para indicadores de RH.</h1>
-          <p>Esta versão adiciona uma home executiva, melhora a leitura visual dos indicadores, diferencia melhor dados reais de dados estimados e organiza o dashboard em uma navegação mais clara para liderança, RH e operação.</p>
-          <div class="hero-actions">
-            <button class="btn btn-primary" type="button" onclick="showPanel('inicio')">Abrir visão inicial</button>
-            <button class="btn btn-secondary" type="button" onclick="showPanel('headcount')">Ir para análises</button>
-          </div>
-        </div>
+        <span class="eyebrow">Navegação executiva</span>
+        <h1 id="hero-title">Indicadores de pessoas organizados para uma leitura mais direta.</h1>
+        <p>A PDV Distribuidora atua na distribuição de alimentos no Espírito Santo, então este painel foi ajustado para um uso mais operacional e executivo: entrada direta nos indicadores, navegação visual por ícones e leitura rápida dos módulos mais importantes do RH. </p>
         <div class="hero-metrics" id="hero-metrics">
           <div class="hero-metric"><span>Headcount</span><strong>--</strong></div>
           <div class="hero-metric"><span>Turnover</span><strong>--</strong></div>
-          <div class="hero-metric"><span>Qualidade da base</span><strong>--</strong></div>
+          <div class="hero-metric"><span>Permanência</span><strong>--</strong></div>
         </div>
       </div>
       <aside class="hero-side" aria-label="Resumo da base">
         <div class="quality-card">
           <h2>Prontidão da base</h2>
-          <p>Os indicadores abaixo mostram o quanto a base atual sustenta uma leitura executiva confiável e onde ainda faltam campos críticos para enriquecer o painel.</p>
+          <p>O painel deixa evidente o que já está confiável para gestão e quais indicadores ainda dependem de novos campos para evoluir.</p>
           <div class="quality-track"><div class="quality-fill" id="quality-fill" style="width: 58%"></div></div>
           <p id="quality-text" style="margin-top:12px;">Aguardando validação da estrutura dos dados.</p>
         </div>
         <div class="quality-card">
-          <strong>Melhorias aplicadas</strong>
-          <p>Tela inicial, resumo executivo, navegação refinada, visual mais corporativo, mensagens de qualidade de dados e maior foco em legibilidade no desktop e no mobile.</p>
+          <strong>Leitura orientada ao negócio</strong>
+          <p>A navegação foi pensada para facilitar leitura por liderança, RH e operação, sem obrigar o usuário a passar por uma tela inicial separada.</p>
         </div>
         <div class="quality-card">
-          <strong>Observação operacional</strong>
-          <p>Motivo de desligamento e absenteísmo continuam dependentes de colunas específicas. Nesta versão, isso aparece como status explícito para evitar interpretação gerencial errada.</p>
+          <strong>Contexto da PDV Distribuidora</strong>
+          <p>Como a empresa distribui marcas do varejo alimentar no Espírito Santo, a visão por filial, movimentação, retenção e pressão de reposição ganha ainda mais relevância operacional. </p>
         </div>
       </aside>
     </section>
 
+    <section id="indicator-hub" class="indicator-hub" aria-label="Atalhos dos indicadores">
+      <button class="indicator-card active" data-panel="headcount" onclick="showPanel('headcount')">
+        <div class="indicator-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Headcount</h3>
+        <p>Quadro atual, distribuição e estrutura do time.</p>
+      </button>
+      <button class="indicator-card" data-panel="turnover" onclick="showPanel('turnover')">
+        <div class="indicator-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg></div>
+        <h3>Turnover</h3>
+        <p>Rotatividade, saídas precoces e variação mensal.</p>
+      </button>
+      <button class="indicator-card" data-panel="movimentacao" onclick="showPanel('movimentacao')">
+        <div class="indicator-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 7h11v11"/><path d="M17 7 7 17"/><path d="M17 17H6V6"/></svg></div>
+        <h3>Movimentação</h3>
+        <p>Entradas, saídas e saldo operacional por período.</p>
+      </button>
+      <button class="indicator-card" data-panel="desligamentos" onclick="showPanel('desligamentos')">
+        <div class="indicator-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 7 7 17"/><path d="M7 7h10v10"/></svg></div>
+        <h3>Desligamentos</h3>
+        <p>Volume de saídas e leitura histórica do tema.</p>
+      </button>
+      <button class="indicator-card" data-panel="diversidade" onclick="showPanel('diversidade')">
+        <div class="indicator-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20a5 5 0 0 1 10 0"/><path d="M11 20a5 5 0 0 1 10 0"/></svg></div>
+        <h3>Diversidade</h3>
+        <p>Composição do quadro e recortes demográficos.</p>
+      </button>
+      <button class="indicator-card" data-panel="tempo" onclick="showPanel('tempo')">
+        <div class="indicator-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Permanência</h3>
+        <p>Tempo de casa, retenção e maturidade do quadro.</p>
+      </button>
+      <button class="indicator-card" data-panel="absenteismo" onclick="showPanel('absenteismo')">
+        <div class="indicator-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Absenteísmo</h3>
+        <p>Módulo preparado para faltas, atestados e afastamentos.</p>
+      </button>
+    </section>
+
     <nav class="nav-strip" aria-label="Seções do dashboard">
-      <button class="nav-btn active" data-panel="inicio" onclick="showPanel('inicio')">Início</button>
-      <button class="nav-btn" data-panel="headcount" onclick="showPanel('headcount')">Headcount</button>
+      <button class="nav-btn active" data-panel="headcount" onclick="showPanel('headcount')">Headcount</button>
       <button class="nav-btn" data-panel="turnover" onclick="showPanel('turnover')">Turnover</button>
       <button class="nav-btn" data-panel="movimentacao" onclick="showPanel('movimentacao')">Movimentação</button>
       <button class="nav-btn" data-panel="desligamentos" onclick="showPanel('desligamentos')">Desligamentos</button>
@@ -341,57 +354,8 @@
     </nav>
 
     <main id="main-content">
-      <section id="panel-inicio" class="panel active" aria-labelledby="inicio-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="inicio-title">Visão executiva</h2>
-            <p>Primeira dobra com KPIs essenciais, panorama da base e atalhos para os módulos analíticos.</p>
-          </div>
-          <div class="meta" id="executive-meta">Período: base completa</div>
-        </div>
-
-        <div class="overview-grid" id="executive-kpis"></div>
-
-        <div class="chart-grid-2">
-          <article class="chart-card">
-            <h3>Headcount por filial</h3>
-            <p class="chart-sub">Leitura rápida da distribuição atual de colaboradores ativos.</p>
-            <canvas id="chart-home-filial"></canvas>
-          </article>
-          <article class="chart-card">
-            <h3>Movimentação recente</h3>
-            <p class="chart-sub">Admissões versus desligamentos nos últimos 12 meses.</p>
-            <canvas id="chart-home-mov"></canvas>
-          </article>
-        </div>
-
-        <div class="modules-grid">
-          <article class="module-card">
-            <h3>Base executiva</h3>
-            <p>Os indicadores mais sensíveis para diretoria ficam na entrada: quadro atual, rotatividade, saldo e risco de saída precoce.</p>
-            <div class="mini-meta">Prioridade alta</div>
-          </article>
-          <article class="module-card">
-            <h3>Qualidade dos dados</h3>
-            <p>Campos obrigatórios para análises completas agora aparecem como status visível, sem esconder limitações da planilha.</p>
-            <div class="mini-meta">Confiabilidade</div>
-          </article>
-          <article class="module-card">
-            <h3>Leitura profissional</h3>
-            <p>Arquitetura visual mais limpa, menos ruído decorativo, melhor hierarquia tipográfica e experiência mais consistente em telas menores.</p>
-            <div class="mini-meta">Experiência</div>
-          </article>
-        </div>
-      </section>
-
-      <section id="panel-headcount" class="panel" aria-labelledby="headcount-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="headcount-title">Headcount</h2>
-            <p>Volume atual de pessoas, distribuição geográfica e composição por estrutura organizacional.</p>
-          </div>
-          <div class="meta" id="hc-meta">Visão geral</div>
-        </div>
+      <section id="panel-headcount" class="panel active" aria-labelledby="headcount-title">
+        <div class="section-heading"><div><h2 id="headcount-title">Headcount</h2><p>Volume atual de pessoas, distribuição geográfica e composição por estrutura organizacional.</p></div><div class="meta" id="hc-meta">Visão geral</div></div>
         <div class="filters">
           <select class="filter-control" id="hc-filial" onchange="renderHeadcount()"><option value="">Todas as filiais</option></select>
           <select class="filter-control" id="hc-cc" onchange="renderHeadcount()"><option value="">Todos os centros de custo</option></select>
@@ -406,13 +370,7 @@
       </section>
 
       <section id="panel-turnover" class="panel" aria-labelledby="turnover-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="turnover-title">Turnover</h2>
-            <p>Rotatividade geral, movimentação precoce e leitura mensal do comportamento de desligamentos.</p>
-          </div>
-          <div class="meta" id="tv-meta">Desligamentos e risco inicial</div>
-        </div>
+        <div class="section-heading"><div><h2 id="turnover-title">Turnover</h2><p>Rotatividade geral, movimentação precoce e leitura mensal do comportamento de desligamentos.</p></div><div class="meta" id="tv-meta">Desligamentos e risco inicial</div></div>
         <div class="filters">
           <select class="filter-control" id="tv-filial" onchange="renderTurnover()"><option value="">Todas as filiais</option></select>
           <select class="filter-control" id="tv-ano" onchange="renderTurnover()"><option value="">Todos os anos</option></select>
@@ -426,13 +384,7 @@
       </section>
 
       <section id="panel-movimentacao" class="panel" aria-labelledby="mov-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="mov-title">Movimentação pessoal</h2>
-            <p>Comparativo entre entradas e saídas por período, com foco em saldo e pressão operacional.</p>
-          </div>
-          <div class="meta" id="mv-meta">Admissões x demissões</div>
-        </div>
+        <div class="section-heading"><div><h2 id="mov-title">Movimentação pessoal</h2><p>Comparativo entre entradas e saídas por período, com foco em saldo e pressão operacional.</p></div><div class="meta" id="mv-meta">Admissões x demissões</div></div>
         <div class="filters">
           <select class="filter-control" id="mv-filial" onchange="renderMovimentacao()"><option value="">Todas as filiais</option></select>
           <select class="filter-control" id="mv-ano" onchange="renderMovimentacao()"><option value="">Todos os anos</option></select>
@@ -443,13 +395,7 @@
       </section>
 
       <section id="panel-desligamentos" class="panel" aria-labelledby="desl-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="desl-title">Desligamentos</h2>
-            <p>Concentração de saídas e sinalização clara de que o motivo ainda depende de campo ausente na planilha.</p>
-          </div>
-          <div class="meta">Dados estimados parcialmente</div>
-        </div>
+        <div class="section-heading"><div><h2 id="desl-title">Desligamentos</h2><p>Concentração de saídas e sinalização clara de que o motivo ainda depende de campo ausente na planilha.</p></div><div class="meta">Dados estimados parcialmente</div></div>
         <div class="info-box">A base atual <strong>não possui a coluna “Motivo Desligamento”</strong>. Nesta versão, o painel deixa explícito que a leitura de desligamentos é estrutural e não causal, evitando conclusões indevidas.</div>
         <div class="kpi-grid" id="desl-kpis"></div>
         <div class="chart-grid-2">
@@ -460,13 +406,7 @@
       </section>
 
       <section id="panel-diversidade" class="panel" aria-labelledby="div-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="div-title">Diversidade</h2>
-            <p>Recortes demográficos e composição da força de trabalho com filtros por filial, centro de custo e status.</p>
-          </div>
-          <div class="meta" id="div-meta">Composição da base</div>
-        </div>
+        <div class="section-heading"><div><h2 id="div-title">Diversidade</h2><p>Recortes demográficos e composição da força de trabalho com filtros por filial, centro de custo e status.</p></div><div class="meta" id="div-meta">Composição da base</div></div>
         <div class="filters">
           <select class="filter-control" id="div-filial" onchange="renderDiversidade()"><option value="">Todas as filiais</option></select>
           <select class="filter-control" id="div-cc" onchange="renderDiversidade()"><option value="">Todos os centros de custo</option></select>
@@ -476,13 +416,7 @@
       </section>
 
       <section id="panel-tempo" class="panel" aria-labelledby="tempo-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="tempo-title">Tempo de permanência</h2>
-            <p>Tempo médio de casa, concentração de recém-admitidos e retenção por estrutura.</p>
-          </div>
-          <div class="meta">Retenção e maturidade</div>
-        </div>
+        <div class="section-heading"><div><h2 id="tempo-title">Tempo de permanência</h2><p>Tempo médio de casa, concentração de recém-admitidos e retenção por estrutura.</p></div><div class="meta">Retenção e maturidade</div></div>
         <div class="kpi-grid" id="tempo-kpis"></div>
         <div class="chart-grid-2">
           <article class="chart-card"><h3>Distribuição de tempo dos ativos</h3><canvas id="chart-tempo-ativos"></canvas></article>
@@ -495,13 +429,7 @@
       </section>
 
       <section id="panel-absenteismo" class="panel" aria-labelledby="abs-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="abs-title">Absenteísmo e afastamentos</h2>
-            <p>Área preparada para expansão futura, com sinalização clara de dependência de dados de ponto.</p>
-          </div>
-          <div class="meta">Módulo parcial</div>
-        </div>
+        <div class="section-heading"><div><h2 id="abs-title">Absenteísmo e afastamentos</h2><p>Área preparada para expansão futura, com sinalização clara de dependência de dados de ponto.</p></div><div class="meta">Módulo parcial</div></div>
         <div class="info-box">Para cálculo completo deste painel, a planilha precisa incluir <strong>Horas Faltadas</strong>, <strong>Qtd Faltas</strong>, <strong>Tipo Afastamento</strong> e <strong>Qtd Atestados</strong>. Enquanto isso, o módulo mostra apenas métricas auxiliares seguras.</div>
         <div class="kpi-grid" id="abs-kpis"></div>
         <div class="chart-grid-2">
@@ -511,80 +439,35 @@
       </section>
     </main>
 
-    <p class="footer-note">Versão melhorada do dashboard com camada inicial executiva, linguagem visual mais corporativa e maior transparência sobre a qualidade da base.</p>
+    <p class="footer-note">PDV Distribuidora · Painel de RH com navegação visual por indicadores e foco em leitura operacional e executiva. </p>
   </div>
 
   <script>
     let DATA = [];
     let charts = {};
+    const COLORS = ['#57a5a8','#7db05d','#e1ad41','#e16c7a','#7c8bff','#c47f5d','#5f9ed1','#b786ff','#d9a441','#58c0ae'];
 
-    function excelDate(d) {
-      const base = new Date(1900, 0, 1);
-      return Math.floor((d - base) / 86400000) + 2;
-    }
-    function fromExcel(n) {
-      if (!n || isNaN(n)) return null;
-      const d = new Date(1900, 0, 1);
-      d.setDate(d.getDate() + Number(n) - 2);
-      return d;
-    }
-    function parseDateFlex(v) {
-      if (!v) return null;
-      if (!isNaN(v)) return fromExcel(v);
-      const m = String(v).match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
-      if (m) return new Date(+m[3], +m[2] - 1, +m[1]);
-      const d = new Date(v);
-      return isNaN(d) ? null : d;
-    }
-    function monthLabel(d) {
-      if (!d) return null;
-      return `${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
-    }
-    function diffMonths(a, b) {
-      if (!a || !b) return 0;
-      return (b.getFullYear() - a.getFullYear()) * 12 + (b.getMonth() - a.getMonth());
-    }
-    function roundN(n, dec = 1) {
-      return Math.round((Number(n) || 0) * 10 ** dec) / 10 ** dec;
-    }
-    function pct(n, total, dec = 1) {
-      return roundN(total ? (n / total) * 100 : 0, dec);
-    }
-    function countBy(arr, key) {
-      const m = {};
-      arr.forEach(r => {
-        const v = r[key] || 'N/D';
-        m[v] = (m[v] || 0) + 1;
-      });
-      return m;
-    }
-    function destroyChart(id) {
-      if (charts[id]) { charts[id].destroy(); delete charts[id]; }
-    }
-
-    const COLORS = ['#4f98a3','#7cb45b','#e0ad42','#e06a79','#7c7cff','#c47f5d','#5f9ed1','#b786ff','#d9a441','#58c0ae'];
+    function fromExcel(n) { if (!n || isNaN(n)) return null; const d = new Date(1900, 0, 1); d.setDate(d.getDate() + Number(n) - 2); return d; }
+    function parseDateFlex(v) { if (!v) return null; if (!isNaN(v)) return fromExcel(v); const m = String(v).match(/^(\d{2})\/(\d{2})\/(\d{4})$/); if (m) return new Date(+m[3], +m[2] - 1, +m[1]); const d = new Date(v); return isNaN(d) ? null : d; }
+    function monthLabel(d) { return d ? `${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}` : null; }
+    function diffMonths(a, b) { return (!a || !b) ? 0 : (b.getFullYear() - a.getFullYear()) * 12 + (b.getMonth() - a.getMonth()); }
+    function roundN(n, dec = 1) { return Math.round((Number(n) || 0) * 10 ** dec) / 10 ** dec; }
+    function pct(n, total, dec = 1) { return roundN(total ? (n / total) * 100 : 0, dec); }
+    function countBy(arr, key) { const m = {}; arr.forEach(r => { const v = r[key] || 'N/D'; m[v] = (m[v] || 0) + 1; }); return m; }
+    function destroyChart(id) { if (charts[id]) { charts[id].destroy(); delete charts[id]; } }
 
     function chartColors() {
       const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-      return {
-        grid: dark ? '#2d2b28' : '#e6e1d8',
-        text: dark ? '#aaa6a0' : '#6f6c66',
-        tooltipBg: dark ? '#24221f' : '#ffffff',
-        tooltipText: dark ? '#f0ece6' : '#211f1a',
-        border: dark ? '#3a3733' : '#d6d2cb'
-      };
+      return { grid: dark ? '#2d2b28' : '#e6e1d8', text: dark ? '#aaa6a0' : '#6f6a62', tooltipBg: dark ? '#24221f' : '#ffffff', tooltipText: dark ? '#f0ece6' : '#211f1a', border: dark ? '#3a3733' : '#d6d2cb' };
     }
 
     function makeChart(id, type, labels, datasets, opts = {}) {
       destroyChart(id);
-      const el = document.getElementById(id);
-      if (!el || !window.Chart) return;
-      const ctx = el.getContext('2d');
+      const el = document.getElementById(id); if (!el || !window.Chart) return;
       const palette = chartColors();
       const isDoughnut = type === 'doughnut' || type === 'pie';
       const isBar = type === 'bar';
-
-      charts[id] = new Chart(ctx, {
+      charts[id] = new Chart(el.getContext('2d'), {
         type,
         data: { labels, datasets },
         options: {
@@ -593,51 +476,22 @@
           plugins: {
             legend: { labels: { color: palette.text, font: { family: 'Satoshi', size: 11 } } },
             tooltip: { backgroundColor: palette.tooltipBg, titleColor: palette.tooltipText, bodyColor: palette.text, borderColor: palette.border, borderWidth: 1 },
-            datalabels: isDoughnut ? {
-              display: true,
-              color: '#fff',
-              font: { family: 'Satoshi', size: 11, weight: '700' },
-              formatter: (value, ctx) => {
-                const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
-                const p = total ? value / total * 100 : 0;
-                return p >= 4 ? p.toFixed(1) + '%' : '';
-              }
-            } : isBar ? {
-              display: true,
-              color: palette.text,
-              anchor: 'end',
-              align: 'end',
-              offset: 4,
-              font: { family: 'Satoshi', size: 10, weight: '700' },
-              formatter: v => Math.abs(Math.round(v || 0)) || ''
-            } : { display: false }
+            datalabels: isDoughnut ? { display: true, color: '#fff', font: { family: 'Satoshi', size: 11, weight: '700' }, formatter: (value, ctx) => { const total = ctx.dataset.data.reduce((a, b) => a + b, 0); const p = total ? value / total * 100 : 0; return p >= 4 ? p.toFixed(1) + '%' : ''; } } : isBar ? { display: true, color: palette.text, anchor: 'end', align: 'end', offset: 4, font: { family: 'Satoshi', size: 10, weight: '700' }, formatter: v => Math.abs(Math.round(v || 0)) || '' } : { display: false }
           },
-          scales: !isDoughnut ? {
-            x: { ticks: { color: palette.text, font: { size: 11 } }, grid: { color: palette.grid } },
-            y: { ticks: { color: palette.text, font: { size: 11 } }, grid: { color: palette.grid } }
-          } : undefined,
+          scales: !isDoughnut ? { x: { ticks: { color: palette.text, font: { size: 11 } }, grid: { color: palette.grid } }, y: { ticks: { color: palette.text, font: { size: 11 } }, grid: { color: palette.grid } } } : undefined,
           ...opts
         }
       });
     }
 
     function parseCSV(text) {
-      const rows = [];
-      let row = [], cell = '', inQuotes = false;
+      const rows = []; let row = [], cell = '', inQuotes = false;
       for (let i = 0; i < text.length; i++) {
-        const char = text[i];
-        const next = text[i + 1];
-        if (char === '"') {
-          if (inQuotes && next === '"') { cell += '"'; i++; }
-          else inQuotes = !inQuotes;
-        } else if (char === ',' && !inQuotes) {
-          row.push(cell); cell = '';
-        } else if ((char === '\n' || char === '\r') && !inQuotes) {
-          if (char === '\r' && next === '\n') i++;
-          row.push(cell); rows.push(row); row = []; cell = '';
-        } else {
-          cell += char;
-        }
+        const char = text[i], next = text[i + 1];
+        if (char === '"') { if (inQuotes && next === '"') { cell += '"'; i++; } else inQuotes = !inQuotes; }
+        else if (char === ',' && !inQuotes) { row.push(cell); cell = ''; }
+        else if ((char === '\n' || char === '\r') && !inQuotes) { if (char === '\r' && next === '\n') i++; row.push(cell); rows.push(row); row = []; cell = ''; }
+        else cell += char;
       }
       if (cell.length || row.length) { row.push(cell); rows.push(row); }
       return rows.filter(r => r.some(c => String(c).trim() !== ''));
@@ -649,58 +503,24 @@
       try {
         let text = null;
         loadingText.textContent = 'Conectando ao Google Sheets…';
-        try {
-          const r = await fetch(DIRECT_URL);
-          if (r.ok) {
-            const t = await r.text();
-            if (t.length > 100 && t.includes(',')) text = t;
-          }
-        } catch (_) {}
-        if (!text) {
-          loadingText.textContent = 'Carregando via proxy…';
-          try {
-            const r = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(DIRECT_URL)}`);
-            if (r.ok) {
-              const j = await r.json();
-              if (j.contents && j.contents.includes(',')) text = j.contents;
-            }
-          } catch (_) {}
-        }
-        if (!text) {
-          loadingText.textContent = 'Tentando proxy alternativo…';
-          try {
-            const r = await fetch(`https://corsproxy.io/?${encodeURIComponent(DIRECT_URL)}`);
-            if (r.ok) {
-              const t = await r.text();
-              if (t.length > 100 && t.includes(',')) text = t;
-            }
-          } catch (_) {}
-        }
+        try { const r = await fetch(DIRECT_URL); if (r.ok) { const t = await r.text(); if (t.length > 100 && t.includes(',')) text = t; } } catch (_) {}
+        if (!text) { loadingText.textContent = 'Carregando via proxy…'; try { const r = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(DIRECT_URL)}`); if (r.ok) { const j = await r.json(); if (j.contents && j.contents.includes(',')) text = j.contents; } } catch (_) {} }
+        if (!text) { loadingText.textContent = 'Tentando proxy alternativo…'; try { const r = await fetch(`https://corsproxy.io/?${encodeURIComponent(DIRECT_URL)}`); if (r.ok) { const t = await r.text(); if (t.length > 100 && t.includes(',')) text = t; } } catch (_) {} }
         if (!text || !text.includes(',')) throw new Error('Não foi possível carregar os dados da planilha publicada.');
-
         const rows = parseCSV(text);
         const headers = rows[0].map(h => String(h).trim());
         DATA = rows.slice(1).map(r => {
-          const obj = {};
-          headers.forEach((h, i) => obj[h] = String(r[i] || '').trim());
+          const obj = {}; headers.forEach((h, i) => obj[h] = String(r[i] || '').trim());
           obj._admissao = parseDateFlex(obj['Data de admissão']);
           obj._desligamento = parseDateFlex(obj['Data de desligamento']);
           obj._nascimento = parseDateFlex(obj['Data de nascimento']);
           obj._ativo = !obj._desligamento;
           return obj;
         }).filter(r => r['Nome']);
-
         document.getElementById('last-update').textContent = `Atualizado em ${new Date().toLocaleString('pt-BR')}`;
         document.getElementById('dataset-size').textContent = `Base: ${DATA.length} registros`;
         populateFilters();
-        renderExecutiveHome();
-        renderHeadcount();
-        renderTurnover();
-        renderMovimentacao();
-        renderDesligamentos();
-        renderDiversidade();
-        renderTempo();
-        renderAbsenteismo();
+        renderHero(); renderHeadcount(); renderTurnover(); renderMovimentacao(); renderDesligamentos(); renderDiversidade(); renderTempo(); renderAbsenteismo();
         document.getElementById('loading-screen').style.display = 'none';
       } catch (e) {
         document.getElementById('loading-screen').innerHTML = `<p style="color:var(--color-danger); font-weight:700;">Erro ao carregar dados</p><p style="color:var(--color-text-muted); max-width:420px; text-align:center;">${e.message}</p>`;
@@ -711,203 +531,83 @@
       const filiais = [...new Set(DATA.map(r => r.Filial).filter(Boolean))].sort();
       const ccs = [...new Set(DATA.map(r => r['Centro de custo']).filter(Boolean))].sort();
       const anos = [...new Set(DATA.filter(r => r._admissao).map(r => r._admissao.getFullYear()))].sort((a,b) => b-a);
-
-      document.querySelectorAll('select[id$="-filial"]').forEach(s => {
-        filiais.forEach(f => {
-          const o = document.createElement('option');
-          o.value = f; o.textContent = f; s.appendChild(o);
-        });
-      });
-      document.querySelectorAll('select[id$="-cc"]').forEach(s => {
-        ccs.forEach(c => {
-          const o = document.createElement('option');
-          o.value = c; o.textContent = c; s.appendChild(o);
-        });
-      });
-      document.querySelectorAll('select[id$="-ano"]').forEach(s => {
-        anos.forEach(a => {
-          const o = document.createElement('option');
-          o.value = a; o.textContent = a; s.appendChild(o);
-        });
-      });
+      document.querySelectorAll('select[id$="-filial"]').forEach(s => filiais.forEach(f => { const o = document.createElement('option'); o.value = f; o.textContent = f; s.appendChild(o); }));
+      document.querySelectorAll('select[id$="-cc"]').forEach(s => ccs.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; s.appendChild(o); }));
+      document.querySelectorAll('select[id$="-ano"]').forEach(s => anos.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; s.appendChild(o); }));
     }
 
     function filtered(idPrefix) {
       const filial = document.getElementById(`${idPrefix}-filial`)?.value || '';
       const cc = document.getElementById(`${idPrefix}-cc`)?.value || '';
       const ano = document.getElementById(`${idPrefix}-ano`)?.value || '';
-      return DATA.filter(r => {
-        if (filial && r.Filial !== filial) return false;
-        if (cc && r['Centro de custo'] !== cc) return false;
-        if (ano && r._admissao && r._admissao.getFullYear() != ano) return false;
-        return true;
-      });
+      return DATA.filter(r => { if (filial && r.Filial !== filial) return false; if (cc && r['Centro de custo'] !== cc) return false; if (ano && r._admissao && r._admissao.getFullYear() != ano) return false; return true; });
     }
 
-    function renderExecutiveHome() {
+    function renderHero() {
       const ativos = DATA.filter(r => r._ativo);
       const desligados = DATA.filter(r => r._desligamento);
       const now = new Date();
-      const turnover90 = desligados.filter(r => r._admissao && r._desligamento && diffMonths(r._admissao, r._desligamento) <= 3).length;
       const avgTempo = roundN(ativos.filter(r => r._admissao).reduce((s, r) => s + diffMonths(r._admissao, now), 0) / (ativos.filter(r => r._admissao).length || 1));
-      const qualityScore = 58;
-      const missingCols = ['Motivo Desligamento', 'Horas Faltadas', 'Qtd Faltas', 'Tipo Afastamento', 'Qtd Atestados'];
-
       document.getElementById('hero-metrics').innerHTML = `
         <div class="hero-metric"><span>Headcount ativo</span><strong>${ativos.length}</strong></div>
         <div class="hero-metric"><span>Turnover da base</span><strong>${pct(desligados.length, ativos.length, 1)}%</strong></div>
-        <div class="hero-metric"><span>Permanência média</span><strong>${avgTempo}m</strong></div>
-      `;
-      document.getElementById('quality-fill').style.width = `${qualityScore}%`;
-      document.getElementById('quality-text').textContent = `Base utilizável para análise estrutural, mas ainda faltam ${missingCols.length} campos relevantes para visão completa.`;
-      document.getElementById('executive-kpis').innerHTML = `
-        <article class="kpi-card"><div class="kpi-label">Headcount atual</div><div class="kpi-value kpi-accent">${ativos.length}</div><div class="kpi-sub">colaboradores ativos na base</div></article>
-        <article class="kpi-card"><div class="kpi-label">Desligamentos históricos</div><div class="kpi-value kpi-danger">${desligados.length}</div><div class="kpi-sub">registros com data de desligamento</div></article>
-        <article class="kpi-card"><div class="kpi-label">Turnover até 90 dias</div><div class="kpi-value kpi-warn">${turnover90}</div><div class="kpi-sub">saídas precoces após admissão</div></article>
-        <article class="kpi-card"><div class="kpi-label">Permanência média</div><div class="kpi-value kpi-success">${avgTempo} meses</div><div class="kpi-sub">considerando ativos com data de admissão</div></article>
-      `;
-
-      const byFilial = countBy(ativos, 'Filial');
-      makeChart('chart-home-filial', 'bar', Object.keys(byFilial), [{
-        label: 'Ativos', data: Object.values(byFilial), backgroundColor: ['#4f98a3','#7cb45b','#e0ad42','#e06a79'], borderRadius: 8
-      }], { plugins: { legend: { display: false } } });
-
-      const monthly = {};
-      DATA.forEach(r => {
-        if (r._admissao) {
-          const ml = monthLabel(r._admissao);
-          if (!monthly[ml]) monthly[ml] = { adm: 0, dem: 0 };
-          monthly[ml].adm++;
-        }
-        if (r._desligamento) {
-          const ml = monthLabel(r._desligamento);
-          if (!monthly[ml]) monthly[ml] = { adm: 0, dem: 0 };
-          monthly[ml].dem++;
-        }
-      });
-      const months = Object.keys(monthly).sort().slice(-12);
-      makeChart('chart-home-mov', 'bar', months, [
-        { label: 'Admissões', data: months.map(m => monthly[m]?.adm || 0), backgroundColor: '#7cb45b', borderRadius: 6 },
-        { label: 'Desligamentos', data: months.map(m => monthly[m]?.dem || 0), backgroundColor: '#e06a79', borderRadius: 6 }
-      ]);
+        <div class="hero-metric"><span>Permanência média</span><strong>${avgTempo}m</strong></div>`;
+      document.getElementById('quality-fill').style.width = '58%';
+      document.getElementById('quality-text').textContent = 'Base utilizável para análise estrutural, com campos faltantes relevantes para absenteísmo e motivos de desligamento.';
     }
 
     function renderHeadcount() {
-      const d = filtered('hc');
-      const ativos = d.filter(r => r._ativo);
-      const inativos = d.filter(r => !r._ativo);
-      const filialSel = document.getElementById('hc-filial').value || 'Todas as filiais';
-      const ccSel = document.getElementById('hc-cc').value || 'Todos os centros';
-      document.getElementById('hc-meta').textContent = `${filialSel} · ${ccSel}`;
-
+      const d = filtered('hc'); const ativos = d.filter(r => r._ativo); const inativos = d.filter(r => !r._ativo);
+      document.getElementById('hc-meta').textContent = `${document.getElementById('hc-filial').value || 'Todas as filiais'} · ${document.getElementById('hc-cc').value || 'Todos os centros'}`;
       document.getElementById('hc-kpis').innerHTML = `
         <article class="kpi-card"><div class="kpi-label">Total ativos</div><div class="kpi-value kpi-accent">${ativos.length}</div><div class="kpi-sub">quadro atual visível no filtro</div></article>
         <article class="kpi-card"><div class="kpi-label">Total na base</div><div class="kpi-value">${d.length}</div><div class="kpi-sub">incluindo histórico de desligados</div></article>
         <article class="kpi-card"><div class="kpi-label">Desligados</div><div class="kpi-value kpi-danger">${inativos.length}</div><div class="kpi-sub">${pct(inativos.length, d.length)}% do recorte</div></article>
-        <article class="kpi-card"><div class="kpi-label">Maior filial</div><div class="kpi-value kpi-success">${Object.entries(countBy(ativos, 'Filial')).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'N/D'}</div><div class="kpi-sub">maior concentração de ativos</div></article>
-      `;
-
+        <article class="kpi-card"><div class="kpi-label">Maior filial</div><div class="kpi-value kpi-success">${Object.entries(countBy(ativos, 'Filial')).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'N/D'}</div><div class="kpi-sub">maior concentração de ativos</div></article>`;
       const byFilial = countBy(ativos, 'Filial');
       makeChart('chart-hc-filial', 'bar', Object.keys(byFilial), [{ label: 'Ativos', data: Object.values(byFilial), backgroundColor: COLORS, borderRadius: 8 }], { plugins: { legend: { display: false } } });
       const byCC = countBy(ativos, 'Centro de custo');
       makeChart('chart-hc-cc', 'doughnut', Object.keys(byCC), [{ data: Object.values(byCC), backgroundColor: COLORS, borderWidth: 0 }]);
-      const byCidade = countBy(ativos, 'Cidade');
-      const topCidades = Object.entries(byCidade).sort((a,b)=>b[1]-a[1]).slice(0,10);
-      const max = topCidades[0]?.[1] || 1;
-      document.getElementById('top-cidades').innerHTML = topCidades.map(([cidade, n]) => `
-        <div class="bar-item">
-          <div class="bar-label" title="${cidade}">${cidade}</div>
-          <div class="bar-track"><div class="bar-fill" style="width:${(n / max) * 100}%"></div></div>
-          <div class="bar-val">${n}</div>
-        </div>
-      `).join('');
-      const byCargo = countBy(ativos, 'Cargo atual');
-      const topCargos = Object.entries(byCargo).sort((a,b)=>b[1]-a[1]).slice(0,12);
-      makeChart('chart-hc-cargo', 'bar', topCargos.map(([c]) => c.substring(0, 28)), [{ label: 'Qtd', data: topCargos.map(([,v]) => v), backgroundColor: '#4f98a3', borderRadius: 6 }], { indexAxis: 'y', plugins: { legend: { display: false } } });
+      const byCidade = countBy(ativos, 'Cidade'); const topCidades = Object.entries(byCidade).sort((a,b)=>b[1]-a[1]).slice(0,10); const max = topCidades[0]?.[1] || 1;
+      document.getElementById('top-cidades').innerHTML = topCidades.map(([cidade, n]) => `<div class="bar-item"><div class="bar-label" title="${cidade}">${cidade}</div><div class="bar-track"><div class="bar-fill" style="width:${(n / max) * 100}%"></div></div><div class="bar-val">${n}</div></div>`).join('');
+      const byCargo = countBy(ativos, 'Cargo atual'); const topCargos = Object.entries(byCargo).sort((a,b)=>b[1]-a[1]).slice(0,12);
+      makeChart('chart-hc-cargo', 'bar', topCargos.map(([c]) => c.substring(0, 28)), [{ label: 'Qtd', data: topCargos.map(([,v]) => v), backgroundColor: '#57a5a8', borderRadius: 6 }], { indexAxis: 'y', plugins: { legend: { display: false } } });
     }
 
     function renderTurnover() {
-      const d = filtered('tv');
-      const ativos = DATA.filter(r => r._ativo);
-      const desligados = d.filter(r => r._desligamento);
-      const monthly = {}, monthlyAdm = {};
-      d.forEach(r => {
-        if (r._admissao) { const ml = monthLabel(r._admissao); monthlyAdm[ml] = (monthlyAdm[ml] || 0) + 1; }
-        if (r._desligamento) { const ml = monthLabel(r._desligamento); monthly[ml] = (monthly[ml] || 0) + 1; }
-      });
+      const d = filtered('tv'); const ativos = DATA.filter(r => r._ativo); const desligados = d.filter(r => r._desligamento); const monthly = {}, monthlyAdm = {};
+      d.forEach(r => { if (r._admissao) { const ml = monthLabel(r._admissao); monthlyAdm[ml] = (monthlyAdm[ml] || 0) + 1; } if (r._desligamento) { const ml = monthLabel(r._desligamento); monthly[ml] = (monthly[ml] || 0) + 1; } });
       const months = [...new Set([...Object.keys(monthly), ...Object.keys(monthlyAdm)])].sort().slice(-18);
       const tvRates = months.map(m => roundN(((monthly[m] || 0) / (ativos.length || 1)) * 100, 2));
       const tv90 = desligados.filter(r => r._admissao && r._desligamento && diffMonths(r._admissao, r._desligamento) <= 3);
-      const monthly90 = {};
-      tv90.forEach(r => { const ml = monthLabel(r._desligamento); monthly90[ml] = (monthly90[ml] || 0) + 1; });
-      const totalAdm = d.filter(r => r._admissao).length;
-      const totalDesl = desligados.length;
-      const tvGlobal = roundN((totalDesl / (ativos.length || 1)) * 100, 1);
+      const monthly90 = {}; tv90.forEach(r => { const ml = monthLabel(r._desligamento); monthly90[ml] = (monthly90[ml] || 0) + 1; });
+      const totalAdm = d.filter(r => r._admissao).length; const totalDesl = desligados.length; const tvGlobal = roundN((totalDesl / (ativos.length || 1)) * 100, 1);
       document.getElementById('tv-meta').textContent = `${document.getElementById('tv-filial').value || 'Todas as filiais'} · ${document.getElementById('tv-ano').value || 'Todos os anos'}`;
       document.getElementById('tv-kpis').innerHTML = `
         <article class="kpi-card"><div class="kpi-label">Desligamentos</div><div class="kpi-value kpi-danger">${totalDesl}</div><div class="kpi-sub">no período filtrado</div></article>
         <article class="kpi-card"><div class="kpi-label">Taxa de turnover</div><div class="kpi-value kpi-warn">${tvGlobal}%</div><div class="kpi-sub">desligados sobre ativos atuais</div></article>
         <article class="kpi-card"><div class="kpi-label">Turnover até 90 dias</div><div class="kpi-value kpi-danger">${tv90.length}</div><div class="kpi-sub">${pct(tv90.length, totalDesl)}% das saídas</div></article>
-        <article class="kpi-card"><div class="kpi-label">Saldo do período</div><div class="kpi-value ${totalAdm - totalDesl >= 0 ? 'kpi-success' : 'kpi-danger'}">${totalAdm - totalDesl >= 0 ? '+' : ''}${totalAdm - totalDesl}</div><div class="kpi-sub">admissões menos desligamentos</div></article>
-      `;
-      makeChart('chart-tv-mensal', 'line', months, [{ label: 'Turnover (%)', data: tvRates, borderColor: '#e0ad42', backgroundColor: 'rgba(224,173,66,.12)', tension: .35, fill: true, pointRadius: 4, pointBackgroundColor: '#e0ad42' }]);
-      makeChart('chart-tv-90', 'bar', months, [{ label: 'Saídas até 90 dias', data: months.map(m => monthly90[m] || 0), backgroundColor: '#e06a79', borderRadius: 6 }], { plugins: { legend: { display: false } } });
-      const byFilial = {};
-      d.forEach(r => {
-        const f = r.Filial || 'N/D';
-        if (!byFilial[f]) byFilial[f] = { atv: 0, desl: 0 };
-        if (r._desligamento) byFilial[f].desl++; else byFilial[f].atv++;
-      });
+        <article class="kpi-card"><div class="kpi-label">Saldo do período</div><div class="kpi-value ${totalAdm - totalDesl >= 0 ? 'kpi-success' : 'kpi-danger'}">${totalAdm - totalDesl >= 0 ? '+' : ''}${totalAdm - totalDesl}</div><div class="kpi-sub">admissões menos desligamentos</div></article>`;
+      makeChart('chart-tv-mensal', 'line', months, [{ label: 'Turnover (%)', data: tvRates, borderColor: '#e1ad41', backgroundColor: 'rgba(225,173,65,.12)', tension: .35, fill: true, pointRadius: 4, pointBackgroundColor: '#e1ad41' }]);
+      makeChart('chart-tv-90', 'bar', months, [{ label: 'Saídas até 90 dias', data: months.map(m => monthly90[m] || 0), backgroundColor: '#e16c7a', borderRadius: 6 }], { plugins: { legend: { display: false } } });
+      const byFilial = {}; d.forEach(r => { const f = r.Filial || 'N/D'; if (!byFilial[f]) byFilial[f] = { atv: 0, desl: 0 }; if (r._desligamento) byFilial[f].desl++; else byFilial[f].atv++; });
       const fks = Object.keys(byFilial);
-      makeChart('chart-tv-filial', 'bar', fks, [
-        { label: 'Ativos', data: fks.map(f => byFilial[f].atv), backgroundColor: '#4f98a3', borderRadius: 6 },
-        { label: 'Desligados', data: fks.map(f => byFilial[f].desl), backgroundColor: '#e06a79', borderRadius: 6 }
-      ]);
+      makeChart('chart-tv-filial', 'bar', fks, [{ label: 'Ativos', data: fks.map(f => byFilial[f].atv), backgroundColor: '#57a5a8', borderRadius: 6 }, { label: 'Desligados', data: fks.map(f => byFilial[f].desl), backgroundColor: '#e16c7a', borderRadius: 6 }]);
     }
 
     function renderMovimentacao() {
-      const d = filtered('mv');
-      const monthly = {};
-      d.forEach(r => {
-        if (r._admissao) { const ml = monthLabel(r._admissao); if (!monthly[ml]) monthly[ml] = { adm: 0, dem: 0 }; monthly[ml].adm++; }
-        if (r._desligamento) { const ml = monthLabel(r._desligamento); if (!monthly[ml]) monthly[ml] = { adm: 0, dem: 0 }; monthly[ml].dem++; }
-      });
-      const months = Object.keys(monthly).sort();
-      const last18 = months.slice(-18);
-      const totalAdm = d.filter(r => r._admissao).length;
-      const totalDem = d.filter(r => r._desligamento).length;
+      const d = filtered('mv'); const monthly = {};
+      d.forEach(r => { if (r._admissao) { const ml = monthLabel(r._admissao); if (!monthly[ml]) monthly[ml] = { adm: 0, dem: 0 }; monthly[ml].adm++; } if (r._desligamento) { const ml = monthLabel(r._desligamento); if (!monthly[ml]) monthly[ml] = { adm: 0, dem: 0 }; monthly[ml].dem++; } });
+      const months = Object.keys(monthly).sort(); const last18 = months.slice(-18); const totalAdm = d.filter(r => r._admissao).length; const totalDem = d.filter(r => r._desligamento).length;
       document.getElementById('mv-meta').textContent = `${document.getElementById('mv-filial').value || 'Todas as filiais'} · ${document.getElementById('mv-ano').value || 'Todos os anos'}`;
       document.getElementById('mv-kpis').innerHTML = `
         <article class="kpi-card"><div class="kpi-label">Admissões</div><div class="kpi-value kpi-success">${totalAdm}</div><div class="kpi-sub">entradas registradas</div></article>
         <article class="kpi-card"><div class="kpi-label">Desligamentos</div><div class="kpi-value kpi-danger">${totalDem}</div><div class="kpi-sub">saídas registradas</div></article>
         <article class="kpi-card"><div class="kpi-label">Saldo</div><div class="kpi-value ${totalAdm - totalDem >= 0 ? 'kpi-success' : 'kpi-danger'}">${totalAdm - totalDem >= 0 ? '+' : ''}${totalAdm - totalDem}</div><div class="kpi-sub">variação líquida do quadro</div></article>
-        <article class="kpi-card"><div class="kpi-label">Média de entradas/mês</div><div class="kpi-value kpi-accent">${roundN(totalAdm / (months.length || 1))}</div><div class="kpi-sub">média simples do recorte</div></article>
-      `;
-      makeChart('chart-mv-mensal', 'bar', last18, [
-        { label: 'Admissões', data: last18.map(m => monthly[m]?.adm || 0), backgroundColor: '#7cb45b', borderRadius: 6 },
-        { label: 'Desligamentos', data: last18.map(m => -(monthly[m]?.dem || 0)), backgroundColor: '#e06a79', borderRadius: 6 }
-      ]);
-      const filiais = [...new Set(d.map(r => r.Filial).filter(Boolean))].sort();
-      const last6 = months.slice(-6);
-      document.getElementById('table-movimentacao').innerHTML = `
-        <thead>
-          <tr><th>Filial</th>${last6.map(m => `<th colspan="2">${m}</th>`).join('')}<th colspan="2">Total</th></tr>
-          <tr><th></th>${last6.map(() => '<th>Adm</th><th>Dem</th>').join('')}<th>Adm</th><th>Dem</th></tr>
-        </thead>
-        <tbody>
-          ${filiais.map(f => {
-            const fData = d.filter(r => r.Filial === f);
-            const fm = {};
-            fData.forEach(r => {
-              if (r._admissao) { const ml = monthLabel(r._admissao); if (!fm[ml]) fm[ml] = { a: 0, d: 0 }; fm[ml].a++; }
-              if (r._desligamento) { const ml = monthLabel(r._desligamento); if (!fm[ml]) fm[ml] = { a: 0, d: 0 }; fm[ml].d++; }
-            });
-            const tAdm = fData.filter(r => r._admissao).length;
-            const tDem = fData.filter(r => r._desligamento).length;
-            return `<tr><td><strong>${f}</strong></td>${last6.map(m => `<td class="num-pos">${fm[m]?.a || 0}</td><td class="num-neg">${fm[m]?.d || 0}</td>`).join('')}<td class="num-pos">${tAdm}</td><td class="num-neg">${tDem}</td></tr>`;
-          }).join('')}
-        </tbody>
-      `;
+        <article class="kpi-card"><div class="kpi-label">Média de entradas/mês</div><div class="kpi-value kpi-accent">${roundN(totalAdm / (months.length || 1))}</div><div class="kpi-sub">média simples do recorte</div></article>`;
+      makeChart('chart-mv-mensal', 'bar', last18, [{ label: 'Admissões', data: last18.map(m => monthly[m]?.adm || 0), backgroundColor: '#7db05d', borderRadius: 6 }, { label: 'Desligamentos', data: last18.map(m => -(monthly[m]?.dem || 0)), backgroundColor: '#e16c7a', borderRadius: 6 }]);
+      const filiais = [...new Set(d.map(r => r.Filial).filter(Boolean))].sort(); const last6 = months.slice(-6);
+      document.getElementById('table-movimentacao').innerHTML = `<thead><tr><th>Filial</th>${last6.map(m => `<th colspan="2">${m}</th>`).join('')}<th colspan="2">Total</th></tr><tr><th></th>${last6.map(() => '<th>Adm</th><th>Dem</th>').join('')}<th>Adm</th><th>Dem</th></tr></thead><tbody>${filiais.map(f => { const fData = d.filter(r => r.Filial === f); const fm = {}; fData.forEach(r => { if (r._admissao) { const ml = monthLabel(r._admissao); if (!fm[ml]) fm[ml] = { a: 0, d: 0 }; fm[ml].a++; } if (r._desligamento) { const ml = monthLabel(r._desligamento); if (!fm[ml]) fm[ml] = { a: 0, d: 0 }; fm[ml].d++; } }); const tAdm = fData.filter(r => r._admissao).length; const tDem = fData.filter(r => r._desligamento).length; return `<tr><td><strong>${f}</strong></td>${last6.map(m => `<td class="num-pos">${fm[m]?.a || 0}</td><td class="num-neg">${fm[m]?.d || 0}</td>`).join('')}<td class="num-pos">${tAdm}</td><td class="num-neg">${tDem}</td></tr>`; }).join('')}</tbody>`;
     }
 
     function renderDesligamentos() {
@@ -916,92 +616,41 @@
         <article class="kpi-card"><div class="kpi-label">Total desligamentos</div><div class="kpi-value kpi-danger">${desl.length}</div><div class="kpi-sub">registros históricos da base</div></article>
         <article class="kpi-card"><div class="kpi-label">Filial com mais saídas</div><div class="kpi-value">${Object.entries(countBy(desl, 'Filial')).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'N/D'}</div><div class="kpi-sub">maior concentração de desligamentos</div></article>
         <article class="kpi-card"><div class="kpi-label">Média de permanência</div><div class="kpi-value kpi-warn">${roundN(desl.filter(r => r._admissao && r._desligamento).reduce((s,r)=>s + diffMonths(r._admissao, r._desligamento),0) / (desl.filter(r => r._admissao && r._desligamento).length || 1))}</div><div class="kpi-sub">meses entre admissão e desligamento</div></article>
-        <article class="kpi-card"><div class="kpi-label">Status analítico</div><div class="kpi-value kpi-danger">Parcial</div><div class="kpi-sub">sem motivo de desligamento estruturado</div></article>
-      `;
-      const byCC = countBy(desl, 'Centro de custo');
-      makeChart('chart-desl-cc', 'doughnut', Object.keys(byCC), [{ data: Object.values(byCC), backgroundColor: COLORS, borderWidth: 0 }]);
-      const byFilial = countBy(desl, 'Filial');
-      makeChart('chart-desl-filial', 'bar', Object.keys(byFilial), [{ label: 'Desligamentos', data: Object.values(byFilial), backgroundColor: '#e06a79', borderRadius: 6 }], { plugins: { legend: { display: false } } });
-      const monthly = {};
-      desl.forEach(r => { const ml = monthLabel(r._desligamento); if (ml) monthly[ml] = (monthly[ml] || 0) + 1; });
-      const months = Object.keys(monthly).sort().slice(-18);
-      makeChart('chart-desl-mensal', 'line', months, [{ label: 'Desligamentos', data: months.map(m => monthly[m] || 0), borderColor: '#e06a79', backgroundColor: 'rgba(224,106,121,.12)', tension: .35, fill: true, pointRadius: 4, pointBackgroundColor: '#e06a79' }]);
+        <article class="kpi-card"><div class="kpi-label">Status analítico</div><div class="kpi-value kpi-danger">Parcial</div><div class="kpi-sub">sem motivo de desligamento estruturado</div></article>`;
+      const byCC = countBy(desl, 'Centro de custo'); makeChart('chart-desl-cc', 'doughnut', Object.keys(byCC), [{ data: Object.values(byCC), backgroundColor: COLORS, borderWidth: 0 }]);
+      const byFilial = countBy(desl, 'Filial'); makeChart('chart-desl-filial', 'bar', Object.keys(byFilial), [{ label: 'Desligamentos', data: Object.values(byFilial), backgroundColor: '#e16c7a', borderRadius: 6 }], { plugins: { legend: { display: false } } });
+      const monthly = {}; desl.forEach(r => { const ml = monthLabel(r._desligamento); if (ml) monthly[ml] = (monthly[ml] || 0) + 1; }); const months = Object.keys(monthly).sort().slice(-18);
+      makeChart('chart-desl-mensal', 'line', months, [{ label: 'Desligamentos', data: months.map(m => monthly[m] || 0), borderColor: '#e16c7a', backgroundColor: 'rgba(225,108,122,.12)', tension: .35, fill: true, pointRadius: 4, pointBackgroundColor: '#e16c7a' }]);
     }
 
     function renderDiversidade() {
-      const filial = document.getElementById('div-filial')?.value || '';
-      const cc = document.getElementById('div-cc')?.value || '';
-      const status = document.getElementById('div-status')?.value || 'ativos';
+      const filial = document.getElementById('div-filial')?.value || ''; const cc = document.getElementById('div-cc')?.value || ''; const status = document.getElementById('div-status')?.value || 'ativos';
       document.getElementById('div-meta').textContent = `${filial || 'Todas as filiais'} · ${cc || 'Todos os centros'} · ${status === 'ativos' ? 'Somente ativos' : 'Todos'}`;
       const now = new Date();
-      const ageGroup = r => {
-        if (!r._nascimento) return 'N/D';
-        const age = Math.floor((now - r._nascimento) / (365.25 * 24 * 3600 * 1000));
-        if (age < 25) return '18-24';
-        if (age < 35) return '25-34';
-        if (age < 45) return '35-44';
-        if (age < 55) return '45-54';
-        return '55+';
-      };
-      let d = DATA.filter(r => {
-        if (filial && r.Filial !== filial) return false;
-        if (cc && r['Centro de custo'] !== cc) return false;
-        if (status === 'ativos' && !r._ativo) return false;
-        return true;
-      });
-      const dims = [
-        { key: 'Etnia', label: 'Etnia / raça', colors: COLORS },
-        { key: 'Sexo', label: 'Gênero', colors: ['#4f98a3','#e06a79','#e0ad42','#7cb45b'] },
-        { key: 'Estado civil', label: 'Estado civil', colors: COLORS },
-        { key: '_age', label: 'Faixa etária', colors: COLORS, fn: ageGroup }
-      ];
-      const container = document.getElementById('diversity-charts');
-      container.innerHTML = '';
-      dims.forEach((dim, idx) => {
-        const counts = {};
-        d.forEach(r => {
-          const v = dim.fn ? dim.fn(r) : (r[dim.key] || 'N/D');
-          counts[v] = (counts[v] || 0) + 1;
-        });
-        const card = document.createElement('article');
-        card.className = 'chart-card';
-        card.innerHTML = `<h3>${dim.label}</h3><canvas id="chart-div-${idx}"></canvas>`;
-        container.appendChild(card);
-        requestAnimationFrame(() => {
-          makeChart(`chart-div-${idx}`, 'doughnut', Object.keys(counts), [{ data: Object.values(counts), backgroundColor: dim.colors, borderWidth: 0 }], { plugins: { legend: { position: 'right' } } });
-        });
-      });
+      const ageGroup = r => { if (!r._nascimento) return 'N/D'; const age = Math.floor((now - r._nascimento) / (365.25 * 24 * 3600 * 1000)); if (age < 25) return '18-24'; if (age < 35) return '25-34'; if (age < 45) return '35-44'; if (age < 55) return '45-54'; return '55+'; };
+      let d = DATA.filter(r => { if (filial && r.Filial !== filial) return false; if (cc && r['Centro de custo'] !== cc) return false; if (status === 'ativos' && !r._ativo) return false; return true; });
+      const dims = [{ key: 'Etnia', label: 'Etnia / raça', colors: COLORS }, { key: 'Sexo', label: 'Gênero', colors: ['#57a5a8','#e16c7a','#e1ad41','#7db05d'] }, { key: 'Estado civil', label: 'Estado civil', colors: COLORS }, { key: '_age', label: 'Faixa etária', colors: COLORS, fn: ageGroup }];
+      const container = document.getElementById('diversity-charts'); container.innerHTML = '';
+      dims.forEach((dim, idx) => { const counts = {}; d.forEach(r => { const v = dim.fn ? dim.fn(r) : (r[dim.key] || 'N/D'); counts[v] = (counts[v] || 0) + 1; }); const card = document.createElement('article'); card.className = 'chart-card'; card.innerHTML = `<h3>${dim.label}</h3><canvas id="chart-div-${idx}"></canvas>`; container.appendChild(card); requestAnimationFrame(() => makeChart(`chart-div-${idx}`, 'doughnut', Object.keys(counts), [{ data: Object.values(counts), backgroundColor: dim.colors, borderWidth: 0 }], { plugins: { legend: { position: 'right' } } })); });
     }
 
     function renderTempo() {
-      const ativos = DATA.filter(r => r._ativo && r._admissao);
-      const desl = DATA.filter(r => !r._ativo && r._admissao && r._desligamento);
-      const now = new Date();
-      const tempoAtivos = ativos.map(r => diffMonths(r._admissao, now));
-      const tempoDesl = desl.map(r => diffMonths(r._admissao, r._desligamento));
-      const avgAtivos = roundN(tempoAtivos.reduce((s,n)=>s+n,0) / (tempoAtivos.length || 1));
-      const avgDesl = roundN(tempoDesl.reduce((s,n)=>s+n,0) / (tempoDesl.length || 1));
+      const ativos = DATA.filter(r => r._ativo && r._admissao); const desl = DATA.filter(r => !r._ativo && r._admissao && r._desligamento); const now = new Date();
+      const tempoAtivos = ativos.map(r => diffMonths(r._admissao, now)); const tempoDesl = desl.map(r => diffMonths(r._admissao, r._desligamento));
+      const avgAtivos = roundN(tempoAtivos.reduce((s,n)=>s+n,0) / (tempoAtivos.length || 1)); const avgDesl = roundN(tempoDesl.reduce((s,n)=>s+n,0) / (tempoDesl.length || 1));
       document.getElementById('tempo-kpis').innerHTML = `
         <article class="kpi-card"><div class="kpi-label">Permanência média dos ativos</div><div class="kpi-value kpi-accent">${avgAtivos}</div><div class="kpi-sub">meses · ${roundN(avgAtivos / 12, 1)} anos</div></article>
         <article class="kpi-card"><div class="kpi-label">Permanência média dos desligados</div><div class="kpi-value kpi-danger">${avgDesl}</div><div class="kpi-sub">meses · ${roundN(avgDesl / 12, 1)} anos</div></article>
         <article class="kpi-card"><div class="kpi-label">Ativos com menos de 6 meses</div><div class="kpi-value kpi-warn">${tempoAtivos.filter(t => t < 6).length}</div><div class="kpi-sub">${pct(tempoAtivos.filter(t => t < 6).length, ativos.length)}% do quadro ativo</div></article>
-        <article class="kpi-card"><div class="kpi-label">Ativos com mais de 2 anos</div><div class="kpi-value kpi-success">${tempoAtivos.filter(t => t >= 24).length}</div><div class="kpi-sub">${pct(tempoAtivos.filter(t => t >= 24).length, ativos.length)}% do quadro ativo</div></article>
-      `;
-      const bins = [3,6,12,18,24,36,60,999];
-      const labels = ['0-3m','3-6m','6-12m','12-18m','18-24m','24-36m','36-60m','60m+'];
-      const histBins = arr => {
-        const counts = new Array(bins.length).fill(0);
-        arr.forEach(v => { const idx = bins.findIndex((b,i) => v <= b || i === bins.length - 1); if (idx >= 0) counts[idx]++; });
-        return counts;
-      };
-      makeChart('chart-tempo-ativos', 'bar', labels, [{ label: 'Ativos', data: histBins(tempoAtivos), backgroundColor: '#4f98a3', borderRadius: 6 }], { plugins: { legend: { display: false } } });
-      makeChart('chart-tempo-desl', 'bar', labels, [{ label: 'Desligados', data: histBins(tempoDesl), backgroundColor: '#e06a79', borderRadius: 6 }], { plugins: { legend: { display: false } } });
-      const filiais = [...new Set(ativos.map(r => r.Filial).filter(Boolean))].sort();
-      const avgByFilial = filiais.map(f => roundN(ativos.filter(r => r.Filial === f).map(r => diffMonths(r._admissao, now)).reduce((s,n)=>s+n,0) / (ativos.filter(r => r.Filial === f).length || 1)));
-      makeChart('chart-tempo-filial-ativos', 'bar', filiais, [{ label: 'Média (meses)', data: avgByFilial, backgroundColor: '#7cb45b', borderRadius: 6 }], { plugins: { legend: { display: false } } });
-      const ccs = [...new Set(ativos.map(r => r['Centro de custo']).filter(Boolean))].sort();
-      const avgByCC = ccs.map(c => roundN(ativos.filter(r => r['Centro de custo'] === c).map(r => diffMonths(r._admissao, now)).reduce((s,n)=>s+n,0) / (ativos.filter(r => r['Centro de custo'] === c).length || 1)));
-      makeChart('chart-tempo-cc-ativos', 'bar', ccs, [{ label: 'Média (meses)', data: avgByCC, backgroundColor: '#e0ad42', borderRadius: 6 }], { plugins: { legend: { display: false } } });
+        <article class="kpi-card"><div class="kpi-label">Ativos com mais de 2 anos</div><div class="kpi-value kpi-success">${tempoAtivos.filter(t => t >= 24).length}</div><div class="kpi-sub">${pct(tempoAtivos.filter(t => t >= 24).length, ativos.length)}% do quadro ativo</div></article>`;
+      const bins = [3,6,12,18,24,36,60,999], labels = ['0-3m','3-6m','6-12m','12-18m','18-24m','24-36m','36-60m','60m+'];
+      const histBins = arr => { const counts = new Array(bins.length).fill(0); arr.forEach(v => { const idx = bins.findIndex((b,i) => v <= b || i === bins.length - 1); if (idx >= 0) counts[idx]++; }); return counts; };
+      makeChart('chart-tempo-ativos', 'bar', labels, [{ label: 'Ativos', data: histBins(tempoAtivos), backgroundColor: '#57a5a8', borderRadius: 6 }], { plugins: { legend: { display: false } } });
+      makeChart('chart-tempo-desl', 'bar', labels, [{ label: 'Desligados', data: histBins(tempoDesl), backgroundColor: '#e16c7a', borderRadius: 6 }], { plugins: { legend: { display: false } } });
+      const filiais = [...new Set(ativos.map(r => r.Filial).filter(Boolean))].sort(); const avgByFilial = filiais.map(f => roundN(ativos.filter(r => r.Filial === f).map(r => diffMonths(r._admissao, now)).reduce((s,n)=>s+n,0) / (ativos.filter(r => r.Filial === f).length || 1)));
+      makeChart('chart-tempo-filial-ativos', 'bar', filiais, [{ label: 'Média (meses)', data: avgByFilial, backgroundColor: '#7db05d', borderRadius: 6 }], { plugins: { legend: { display: false } } });
+      const ccs = [...new Set(ativos.map(r => r['Centro de custo']).filter(Boolean))].sort(); const avgByCC = ccs.map(c => roundN(ativos.filter(r => r['Centro de custo'] === c).map(r => diffMonths(r._admissao, now)).reduce((s,n)=>s+n,0) / (ativos.filter(r => r['Centro de custo'] === c).length || 1)));
+      makeChart('chart-tempo-cc-ativos', 'bar', ccs, [{ label: 'Média (meses)', data: avgByCC, backgroundColor: '#e1ad41', borderRadius: 6 }], { plugins: { legend: { display: false } } });
     }
 
     function renderAbsenteismo() {
@@ -1010,13 +659,9 @@
         <article class="kpi-card"><div class="kpi-label">Base ativa</div><div class="kpi-value kpi-accent">${ativos.length}</div><div class="kpi-sub">colaboradores ativos</div></article>
         <article class="kpi-card"><div class="kpi-label">Taxa de absenteísmo</div><div class="kpi-value kpi-warn">—</div><div class="kpi-sub">depende de dados de ponto</div></article>
         <article class="kpi-card"><div class="kpi-label">Status do módulo</div><div class="kpi-value">Parcial</div><div class="kpi-sub">somente métricas auxiliares disponíveis</div></article>
-        <article class="kpi-card"><div class="kpi-label">Campos faltantes</div><div class="kpi-value kpi-danger">4</div><div class="kpi-sub">faltas, horas, afastamentos e atestados</div></article>
-      `;
-      const byFilial = countBy(ativos, 'Filial');
-      makeChart('chart-abs-ativos-filial', 'bar', Object.keys(byFilial), [{ label: 'Ativos', data: Object.values(byFilial), backgroundColor: '#4f98a3', borderRadius: 6 }], { plugins: { legend: { display: false } } });
-      const byInst = countBy(DATA, 'Grau de instrução');
-      const topInst = Object.entries(byInst).sort((a,b)=>b[1]-a[1]).slice(0,8);
-      const cleanLabel = l => l.replace(/^\d+ - /, '').substring(0, 30);
+        <article class="kpi-card"><div class="kpi-label">Campos faltantes</div><div class="kpi-value kpi-danger">4</div><div class="kpi-sub">faltas, horas, afastamentos e atestados</div></article>`;
+      const byFilial = countBy(ativos, 'Filial'); makeChart('chart-abs-ativos-filial', 'bar', Object.keys(byFilial), [{ label: 'Ativos', data: Object.values(byFilial), backgroundColor: '#57a5a8', borderRadius: 6 }], { plugins: { legend: { display: false } } });
+      const byInst = countBy(DATA, 'Grau de instrução'); const topInst = Object.entries(byInst).sort((a,b)=>b[1]-a[1]).slice(0,8); const cleanLabel = l => l.replace(/^\d+ - /, '').substring(0, 30);
       makeChart('chart-abs-instrucao', 'doughnut', topInst.map(([l]) => cleanLabel(l)), [{ data: topInst.map(([,v]) => v), backgroundColor: COLORS, borderWidth: 0 }]);
     }
 
@@ -1024,42 +669,19 @@
       document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
       document.getElementById(`panel-${id}`).classList.add('active');
       document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.panel === id));
+      document.querySelectorAll('.indicator-card').forEach(card => card.classList.toggle('active', card.dataset.panel === id));
       document.getElementById('main-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function initThemeToggle() {
-      const btn = document.querySelector('[data-theme-toggle]');
-      const root = document.documentElement;
-      let current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.setAttribute('data-theme', current);
-      const paint = () => {
-        btn.innerHTML = current === 'dark'
-          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'
-          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-      };
+      const btn = document.querySelector('[data-theme-toggle]'); const root = document.documentElement;
+      let current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; root.setAttribute('data-theme', current);
+      const paint = () => { btn.innerHTML = current === 'dark' ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>' : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'; };
       paint();
-      btn.addEventListener('click', () => {
-        current = current === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', current);
-        paint();
-        if (DATA.length) {
-          renderExecutiveHome();
-          renderHeadcount();
-          renderTurnover();
-          renderMovimentacao();
-          renderDesligamentos();
-          renderDiversidade();
-          renderTempo();
-          renderAbsenteismo();
-        }
-      });
+      btn.addEventListener('click', () => { current = current === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', current); paint(); if (DATA.length) { renderHero(); renderHeadcount(); renderTurnover(); renderMovimentacao(); renderDesligamentos(); renderDiversidade(); renderTempo(); renderAbsenteismo(); } });
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.Chart && window.ChartDataLabels) Chart.register(ChartDataLabels);
-      initThemeToggle();
-      loadData();
-    });
+    document.addEventListener('DOMContentLoaded', () => { if (window.Chart && window.ChartDataLabels) Chart.register(ChartDataLabels); initThemeToggle(); loadData(); });
   </script>
 </body>
 </html>
